@@ -4,7 +4,6 @@ phases:
   install:
     runtime-versions:
       nodejs: 18
-
     commands:
       - npm install -g serverless@3
       - npm install
@@ -12,7 +11,3 @@ phases:
   build:
     commands:
       - serverless deploy
-
-artifacts:
-  files:
-    - '**/*'
