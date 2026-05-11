@@ -1,5 +1,7 @@
 service: lambda-cicd
 
+frameworkVersion: '3'
+
 provider:
   name: aws
   runtime: nodejs18.x
@@ -11,4 +13,18 @@ functions:
     events:
       - http:
           path: hello
+          method: get
+
+  status:
+    handler: handler.status
+    events:
+      - http:
+          path: status
+          method: get
+
+  time:
+    handler: handler.time
+    events:
+      - http:
+          path: time
           method: get
