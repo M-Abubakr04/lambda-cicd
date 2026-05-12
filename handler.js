@@ -24,3 +24,5 @@ module.exports.time = async () => {
     }),
   };
 };
+
+#Test it
